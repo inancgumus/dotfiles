@@ -18,6 +18,8 @@ source "init.sh"
 
 logHead "WELCOME!"
 
+info "\nFor details — Do: tail -f ${dotfiles}/install/install.log\n"
+
 source "ssh-keys.sh"
 source "xcode.sh"
 source "brew.sh"
@@ -29,10 +31,9 @@ source "python.sh"
 source "java.sh"
 source "php.sh"
 source "js.sh"
-# source "redis.sh"
+source "redis.sh"
 source "apps.sh"
 source "configure.sh"
 source "links.sh"
 
-logHead "HAPPY DOODEEEYNG !"
-info "\nFor logs, see: install.log\n"
+logHead "IT'S ALL DONE! HAPPY CODING!"

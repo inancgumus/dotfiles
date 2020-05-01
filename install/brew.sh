@@ -20,11 +20,6 @@ info "updating: homebrew...\c"
 runCmd brew update
 
 
-# https://github.com/Homebrew/homebrew-cask/issues/58046
-info "fixing: brew known error: see: #58046\c"
-runCmd /usr/bin/find "$(brew --prefix)/Caskroom/"*'/.metadata' -type f -name '*.rb' -print0 | /usr/bin/xargs -0 /usr/bin/perl -i -pe 's/depends_on macos: \[.*?\]//gsm;s/depends_on macos: .*//g'
-
-
 logLine "installing: some homebrew helpers"
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 installBrewTap 'homebrew/services'

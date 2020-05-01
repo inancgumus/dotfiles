@@ -15,7 +15,6 @@ installBrewPackage 'exa'  # ls alternative
 installBrewPackage 'bat'  # cat alternative
 installBrewPackage 'fd'   # find alternative
 installBrewPackage 'tldr' # practical man pages - community driven
-installBrewCaskPackage 'heroku-toolbelt'
 installBrewPackage 'docker'
 installBrewPackage 'media-info'
 installBrewPackage 'cmake'

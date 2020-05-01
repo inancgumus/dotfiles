@@ -22,14 +22,14 @@ runCmd git config --global push.default current
 
 # for the last correct the permissions to surpass errors
 # from wrongdoing brew formulas' weird permission handlings
-logLine "homebrew"
+logLine "configuring: homebrew"
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 takeover '~/Library/Logs'
 
-info "brew: cleanup\c"
+info "cleaning it up\c"
 runCmd brew cleanup
 
 
 logLine "configuring: mac os x defaults"
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-source "$dotfiles/osxdefaults.sh"
+source "osxdefaults.sh"

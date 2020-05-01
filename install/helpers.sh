@@ -20,7 +20,7 @@ infoHead () {
 # runs the given command.
 # puts a check sign if the previous command was succesful otherwise puts a mark sign.
 runCmd() {
-  echo "$ $@" >> install.log
+  echo "\n\n$ $@" >> install.log
   "$@" >> install.log 2>&1
   if [ $? = 0 ]; then
     echo -e "${goUpCode} ${green}${checkSign}$nc"
