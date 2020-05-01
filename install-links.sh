@@ -36,4 +36,4 @@ runCmd cp $(brew --prefix nvm)/nvm-exec ~/.nvm/
 reCreateFile "$home/bash_profile"
 
 info "linking ~/.bash_profile"
-echo "source \"${dotfiles}/bash_profile\"" > "$home/.bash_profile"
+echo "source \"${dotfiles}/bash_profile.sh\"" > "$home/.bash_profile"
