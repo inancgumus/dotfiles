@@ -4,7 +4,7 @@
 # if sourced, we need the init file.
 # normally, this init file gets included by install.sh
 if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
-	source './install-init.sh'
+	source './init.sh'
 fi
 
 
@@ -33,4 +33,3 @@ runCmd brew cleanup
 logLine "configuring: mac os x defaults"
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 source "$dotfiles/osxdefaults.sh"
-logOk "OK"

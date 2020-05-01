@@ -28,7 +28,7 @@ cd "$dotfiles"
 rm -f install.log
 
 
-source "./colors.sh"
+source "colors.sh"
 
 
 # CONFIGURE YOUR SECRETS ACCORDINGLY
@@ -36,4 +36,4 @@ source "./colors.sh"
 source "$dev/secrets.sh"
 
 
-source "./install-helpers.sh"
+source "helpers.sh"
