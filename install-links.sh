@@ -3,12 +3,11 @@
 # if sourced, we need the init file.
 # normally, this init file gets included by install.sh
 if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
-	source './install_init.sh'
+	source './install-init.sh'
 fi
 
 
-logLine "installing links"
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+logHead "LINKING"
 
 link "$dotfiles/octaverc.sh" "$home/.octaverc"
 link "$dotfiles/vimrc.sh" "$home/.vimrc"

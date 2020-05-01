@@ -36,4 +36,4 @@ source "./colors.sh"
 source "$dev/secrets.sh"
 
 
-source "./install_helpers.sh"
+source "./install-helpers.sh"

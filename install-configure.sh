@@ -1,11 +1,14 @@
 #!/bin/bash
 
+
 # if sourced, we need the init file.
 # normally, this init file gets included by install.sh
 if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
-	source './install_init.sh'
+	source './install-init.sh'
 fi
 
+
+logHead "CONFIGURING"
 
 
 logLine "configuring: git\c"

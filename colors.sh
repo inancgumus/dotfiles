@@ -42,5 +42,5 @@ checkSign="\xE2\x9C\x93"
 errSign="\xE2\x9C\x97"
 
 
-source './colors.grep.sh'
-source './colors.man.sh'
+source "$dotfiles/colors.grep.sh"
+source "$dotfiles/colors.man.sh"
