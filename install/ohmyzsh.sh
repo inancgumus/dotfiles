@@ -1,5 +1,10 @@
 logLine "installing: oh my zsh"
 
+# run the zsh installer in passive mode
+# so it won't ask questions and spin off a zsh shell.
+export RUNZSH=no
+export CHSH=no
+
 info "installing oh my zsh\c"
 runCmd sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
