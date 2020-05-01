@@ -12,7 +12,7 @@ source "$dotfiles/exports.sh"
 source "$dotfiles/paths.sh"
 source "$dotfiles/aliases.sh"
 source "$dotfiles/colors.sh"
-# source "$dotfiles/functions.sh"
+source "$dotfiles/functions.sh"
 # source "$dotfiles/completions.sh"
 # source "$dotfiles/bash_prompt.sh"
 

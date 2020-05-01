@@ -8,17 +8,17 @@ source 'install_init.sh'
 #
 # SET THESE SETTINGS HERE!
 #
-# Below settings are defaults.
+# NOTE: They have defaults.
 #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# export DEFAULT_COMPUTER_NAME="inanc"
-# export GIT_NAME="Inanc Gumus"
-# export GIT_EMAIL="m@inanc.io"
+# export DEFAULT_COMPUTER_NAME=""
+# export GIT_NAME=""
+# export GIT_EMAIL=""
 
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 logHead 'INSTALLING THE DEVELOPMENT ENVIRONMENT'
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 logLine "Configuring .ssh keys"

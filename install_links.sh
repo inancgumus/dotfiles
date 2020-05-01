@@ -24,13 +24,17 @@ link "/usr/X11/lib/libpng15.dylib" "/usr/local/lib/libpng16.16.dylib"
 # link "/usr/local/opt/redis/*.plist" "~/Library/LaunchAgents"
 
 
-info "installing links: nvm..."
+logLine "installing links: nvm..."
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 reCreateDirectory "$home/.nvm"
-cp $(brew --prefix nvm)/nvm-exec ~/.nvm/ 2>/dev/null || :
+
+info "copying nvm-exec to ~/.nvm\c"
+runCmd cp $(brew --prefix nvm)/nvm-exec ~/.nvm/
 
 
 # doing this last because older commands can override it
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 reCreateFile "$home/bash_profile"
+
+info "linking ~/.bash_profile"
 echo "source \"${dotfiles}/bash_profile\"" > "$home/.bash_profile"
