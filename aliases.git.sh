@@ -3,10 +3,10 @@ alias gp='git push'
 alias gpu='git pull'
 
 GIT_LOG_OPTS='--oneline --decorate --relative-date'
-alias gl='git log $GIT_LOG_OPTS'
-alias glp='git log $GIT_LOG_OPTS --patch'
-alias gls='git log $GIT_LOG_OPTS --stat'
-alias glx='git log $GIT_LOG_OPTS --pretty=full'
+alias gl="git log $GIT_LOG_OPTS"
+alias glp="git log $GIT_LOG_OPTS --patch"
+alias gls="git log $GIT_LOG_OPTS --stat"
+alias glx="git log $GIT_LOG_OPTS --pretty=full"
 
 alias gs='git status -s'
 alias gsx='git status'
