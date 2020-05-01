@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#
+# print a fortunate quote
+#
+source "$dotfiles/fortune.sh"
+
+source "$dotfiles/init.zsh.sh"
+source "$dotfiles/init.zsh.keys.sh"
+
+source "$dotfiles/exports.sh"
+source "$dotfiles/paths.sh"
+source "$dotfiles/aliases.sh"
+source "$dotfiles/colors.sh"
+# source "$dotfiles/functions.sh"
+# source "$dotfiles/completions.sh"
+# source "$dotfiles/bash_prompt.sh"
+
+#
+# init language environments
+#
+source "$dotfiles/env.go.sh"
+source "$dotfiles/env.java.sh"
+source "$dotfiles/env.nodejs.sh"
+source "$dotfiles/env.php.sh"
+source "$dotfiles/env.python.sh"
+source "$dotfiles/env.ruby.sh"
+source "$dotfiles/env.gcloud.sh"
+
+source "$dotfiles/powerline.sh"
