@@ -19,6 +19,10 @@ installBrewPackage 'docker'
 installBrewPackage 'media-info'
 installBrewPackage 'cmake'
 
+installBrewPackage 'fortune'
+installBrewPackage 'lolcat'
+installBrewPackage 'boxes'
+
 
 if isBrewPackageInstalled 'ffmpeg'; then
   warn "ffmpeg is already installed"
