@@ -718,13 +718,13 @@ info "Allow installing user scripts via GitHub Gist or Userscripts.org\c"
 runCmdNONL defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
 runCmd defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
 
-info "Disable the all too sensitive backswipe on trackpads\c"
-runCmdNONL defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-runCmd defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
+info "Enable the backswipe on trackpads\c"
+runCmdNONL defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool true
+runCmd defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool true
 
-info "Disable the all too sensitive backswipe on Magic Mouse\c"
-runCmdNONL defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
-runCmd defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
+info "Enable the backswipe on Magic Mouse\c"
+runCmdNONL defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool true
+runCmd defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool true
 
 info "Use the system-native print preview dialog\c"
 runCmdNONL defaults write com.google.Chrome DisablePrintPreview -bool true
