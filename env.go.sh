@@ -5,4 +5,4 @@
 #export PATH=$PATH:$GOROOT/bin
 
 unset GOPATH
-export GODOCC_STYLE=dracula
+export GODOCC_STYLE=pygments
