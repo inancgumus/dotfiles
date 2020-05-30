@@ -33,5 +33,7 @@ PATH=$PATH:$MAGICK_HOME/bin
 PATH=$PATH:$HOME/go/bin
 PATH=$PATH:$HOME/Library/Python/3.7/bin
 
+PATH=$PATH:$HOME/.cargo/bin
+
 # finally...
 export PATH="$PATH"
