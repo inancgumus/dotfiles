@@ -26,6 +26,12 @@ installBrewPackage 'fortune'
 installBrewPackage 'lolcat'
 installBrewPackage 'boxes'
 
+# cli browser
+installBrewPackage 'lynx'
+
+# document format converter
+installBrewPackage 'pandoc'
+
 
 if isBrewPackageInstalled 'ffmpeg'; then
   warn "ffmpeg is already installed"
