@@ -19,6 +19,9 @@ installBrewPackage 'docker'
 installBrewPackage 'media-info'
 installBrewPackage 'cmake'
 
+# a tool for mem debugging, leak detection, and profiling.
+installBrewPackage '--HEAD' 'https://raw.githubusercontent.com/LouisBrunner/valgrind-macos/master/valgrind.rb'
+
 installBrewPackage 'fortune'
 installBrewPackage 'lolcat'
 installBrewPackage 'boxes'
