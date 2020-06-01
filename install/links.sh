@@ -13,6 +13,11 @@ link "$dotfiles/octaverc.sh" "$home/.octaverc"
 link "$dotfiles/vimrc.sh" "$home/.vimrc"
 link "$dotfiles/inputrc.sh" "$home/.inputrc"
 
+reCreateDirectory "$home/.ssh"
+link "$dev/ssh" "$home/.ssh"
+
+link "$dotfiles/gitconfig.sh" "$home/.gitconfig"
+
 reCreateFile "$home/.gitconfig"
 link "$dotfiles/gitconfig.sh" "$home/.gitconfig"
 
