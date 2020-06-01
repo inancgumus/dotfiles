@@ -20,7 +20,7 @@ infoHead () {
 # runs the given command.
 # puts a check sign if the previous command was succesful otherwise puts a mark sign.
 runCmd() {
-  echo "\n\n$ $@" >> install.log
+  echo -e "\n\n$ $@" >> install.log
   "$@" >> install.log 2>&1
   if [ $? = 0 ]; then
     echo -e "${goUpCode} ${green}${checkSign}$nc"
@@ -47,9 +47,8 @@ warn () {
 isInstalled () {
   if command -v $1 2&>/dev/null; then
     return 0
-  else
-    return 1
   fi
+  return 1
 }
 
 isBrewPackageInstalled () {
@@ -60,77 +59,77 @@ isBrewPackageInstalled () {
 
   if brew list -1 | grep -qi "^${last}\$"; then
     return 0
-  else
-    return 1
   fi
+  return 1
 }
 
 isBrewTapInstalled () {
   if brew tap | grep -qi "^${1}\$"; then
     return 0
-  else
-    return 1
   fi
+  return 1
 }
 
 isBrewCaskPackageInstalled () {
   if brew cask list -1 | grep -qi "^${1}\$"; then
     return 0
-  else
-    return 1
   fi
+  return 1
 }
 
 isNodePackageInstalled () {
   if npm list -g | grep -qi " ${1}@"; then
     return 0
-  else
-    return 1
   fi
+  return 1
 }
 
 isPipPackageInstalled () {
   if pip freeze | grep -Eqi "^${1}==[0-9.]+\$"; then
     return 0
-  else
-    return 1
   fi
+  return 1
 }
 
 isVagrantPlugInInstalled () {
   if vagrant plugin list | grep -Eqi "^${1} \([0-9.]+\)\$"; then
     return 0
-  else
-    return 1
   fi
+  return 1
 }
 
 
 installBrewPackage () {
-  if isBrewPackageInstalled $1; then
+  # don't check for pkg names if there multiple args
+  # for example, this won't check for the package name:
+  # installBrewPackage '--HEAD' 'https://raw.githubusercontent.com/LouisBrunner/valgrind-macos/master/valgrind.rb'
+  if [ "$#" -eq 1 ] && isBrewPackageInstalled $1; then
     warn "brew pkg is already installed: ${1}"
-  else
-    info "installing brew pkg: ${1}\c"
-    runCmd brew install -vd $1
+    return 1
   fi
+
+  info "installing brew pkg: ${@}\c"
+  runCmd brew install -vd $@
 }
 
 installBrewTap () {
   if isBrewTapInstalled $1; then
     warn "brew tap is already installed: ${1}"
-  else
-    info "installing brew tap: ${1}\c"
-    runCmd brew tap -d $1
+    return 1
   fi
+
+  info "installing brew tap: ${1}\c"
+  runCmd brew tap -d $1
 }
 
 installBrewCaskPackage () {
   if isBrewCaskPackageInstalled $1; then
     warn "cask pkg is already installed: ${1}"
-  else
-    info "installing cask pkg: ${1}\c"
-    runCmd brew cask -vd install $1
+    return 1
   fi
+
+  info "installing cask pkg: ${1}\c"
+  runCmd brew cask -vd install $1
 }
 installApp () {
   installBrewCaskPackage $1
@@ -139,29 +138,32 @@ installApp () {
 installNodePackage () {
   if isNodePackageInstalled $1; then
     warn "node pkg is already installed: ${1}"
-  else
-    info "installing node pkg: ${1}\c"
-    runCmd npm i --verbose -g $1
+    return 1
   fi
+
+  info "installing node pkg: ${1}\c"
+  runCmd npm i --verbose -g $1
 }
 
 installPipPackage () {
   if isPipPackageInstalled $1; then
     warn "pip pkg already installed: ${1}"
-  else
-    info "installing pip pkg: ${1}\c"
-    runCmd pip install --verbose $1
+    return 1
   fi
+
+  info "installing pip pkg: ${1}\c"
+  runCmd pip install --verbose $1
 }
 
 # TODO
 installVagrantPlugIn () {
   if isVagrantPlugInInstalled $1; then
     warn "vagrant plugin already installed: ${1}"
-  else
-    info "installing vagrant plugin: ${1}\c"
-    runCmd vagrant plugin install $1
+    return 1
   fi
+
+  info "installing vagrant plugin: ${1}\c"
+  runCmd vagrant plugin install $1
 }
 
 reCreateDirectory () {
