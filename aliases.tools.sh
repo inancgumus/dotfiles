@@ -1,11 +1,9 @@
-#
+alias cat='bat --theme Dracula'
 # usage: download <file-output-name> <download-url>
-#
 alias download="aria2c -c -j32 -s32 -x16 -o"
-
-alias cat='bat'
-alias bat='bat --theme Dracula'
 alias find='fd -c=always'
+alias ls='exa -hF -h --git --color=always -s type'
+alias m="make"
 
-# use bat as man page colorizer
+# use bat as the man page colorizer
 export MANPAGER="sh -c 'col -bx | bat --theme Dracula -l man -p'"
