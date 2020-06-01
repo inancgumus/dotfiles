@@ -11,26 +11,25 @@ installBrewPackage 'wget'
 installBrewPackage 'curl'
 installBrewPackage 'watch'
 installBrewPackage 'tree'
-installBrewPackage 'exa'  # ls alternative
-installBrewPackage 'bat'  # cat alternative
-installBrewPackage 'fd'   # find alternative
-installBrewPackage 'tldr' # practical man pages - community driven
+
+installBrewPackage 'exa'      # ls alternative
+installBrewPackage 'bat'      # cat alternative
+installBrewPackage 'fd'       # find alternative
+installBrewPackage 'tldr'     # practical man pages - community driven
+installBrewPackage 'glow'     # cli markdown renderer
+installBrewPackage 'lynx'     # cli browser
+installBrewPackage 'pandoc'   # document format converter
 installBrewPackage 'docker'
+
 installBrewPackage 'media-info'
 installBrewPackage 'cmake'
 
 # a tool for mem debugging, leak detection, and profiling.
 installBrewPackage '--HEAD' 'https://raw.githubusercontent.com/LouisBrunner/valgrind-macos/master/valgrind.rb'
 
-installBrewPackage 'fortune'
-installBrewPackage 'lolcat'
-installBrewPackage 'boxes'
-
-# cli browser
-installBrewPackage 'lynx'
-
-# document format converter
-installBrewPackage 'pandoc'
+installBrewPackage 'fortune'  # prints a fortune cookie message
+installBrewPackage 'lolcat'   # prints rainbow text
+installBrewPackage 'boxes'    # prints in a box
 
 
 if isBrewPackageInstalled 'ffmpeg'; then
