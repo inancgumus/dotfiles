@@ -13,3 +13,5 @@ installApp 'vlc'
 # installApp 'vagrant'
 # installApp 'flash'
 # installApp 'flash-player'
+
+installApp 'beardedspice'
