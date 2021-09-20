@@ -57,7 +57,8 @@ isBrewPackageInstalled () {
   arr=(${1//// })
   last=${arr[${#arr[@]} - 1]}
 
-  if brew list -1 | grep -qi "^${last}\$"; then
+  # see: https://stackoverflow.com/a/67681140
+  if brew list -1 | (grep -qi "^${last}\$"; ret=$?; cat >/dev/null; exit $ret); then
     return 0
   fi
   return 1
@@ -71,7 +72,7 @@ isBrewTapInstalled () {
 }
 
 isBrewCaskPackageInstalled () {
-  if brew cask list -1 | grep -qi "^${1}\$"; then
+  if brew list --cask -1 | grep -qi "^${1}\$"; then
     return 0
   fi
   return 1
@@ -129,7 +130,7 @@ installBrewCaskPackage () {
   fi
 
   info "installing cask pkg: ${1}\c"
-  runCmd brew cask -vd install $1
+  runCmd brew install --cask -vd install $1
 }
 installApp () {
   installBrewCaskPackage $1
