@@ -48,3 +48,6 @@
 	newHighlight = green bold 22
 [http]
 	cookiefile = /Users/inanc/.gitcookies
+
+[includeIf "gitdir:~/grafana/"]
+    path = ~/grafana/.gitconfig
