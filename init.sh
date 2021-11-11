@@ -20,11 +20,11 @@ source "$dotfiles/functions.sh"
 # init language environments
 #
 source "$dotfiles/env.go.sh"
-source "$dotfiles/env.java.sh"
-source "$dotfiles/env.nodejs.sh"
-source "$dotfiles/env.php.sh"
-source "$dotfiles/env.python.sh"
-source "$dotfiles/env.ruby.sh"
+#source "$dotfiles/env.java.sh"
+#source "$dotfiles/env.nodejs.sh"
+#source "$dotfiles/env.php.sh"
+#source "$dotfiles/env.python.sh"
+#source "$dotfiles/env.ruby.sh"
 source "$dotfiles/env.gcloud.sh"
 
 source "$dotfiles/powerline.sh"
