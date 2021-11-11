@@ -175,6 +175,7 @@ reCreateDirectory () {
     else
       info "backing up dir: '$1' ---> '$1.old'\c"
       runCmd mv "$1" "$1.old"
+      runCmd mkdir "$1"
     fi
   fi  
 }
