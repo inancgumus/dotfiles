@@ -16,7 +16,7 @@ plugins=(
   history
   knife
   knife_ssh
-  osx
+  macos
   zsh-autosuggestions
   # zsh-syntax-highlighting
 
