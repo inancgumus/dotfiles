@@ -32,13 +32,22 @@ logLine "installing links: nvm..."
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 reCreateDirectory "$home/.nvm"
 
-info "copying nvm-exec to ~/.nvm\c"
-runCmd cp $(brew --prefix nvm)/nvm-exec ~/.nvm/
+info "copying nvm-exec to ~/.nvm"
+runCmd cp $(brew --prefix nvm)/nvm-exec "$home/.nvm/"
 
 
 # doing this last because older commands can override it
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 reCreateFile "$home/bash_profile"
-
 info "linking ~/.bash_profile"
 echo "source \"${dotfiles}/bash_profile.sh\"" > "$home/.bash_profile"
+
+reCreateFile "$home/.zshrc"
+info "linking ~/.zshrc"
+echo "source \"${dotfiles}/zsh.sh\"" > "$home/.zshrc"
+
+
+# link iterm2 configuration
+reCreateFile "$home/Library/Preferences/com.googlecode.iterm2.plist"
+info "linking iterm2 configuration"
+link "$dotfiles/com.googlecode.iterm2.plist" "$home/Library/Preferences/com.googlecode.iterm2.plist"
