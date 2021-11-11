@@ -23,7 +23,6 @@ plugins=(
   colorize
   colored-man-pages
 
-  go
   golang
 
   docker
