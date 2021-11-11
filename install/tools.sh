@@ -20,6 +20,7 @@ installBrewPackage 'glow'     # cli markdown renderer
 installBrewPackage 'lynx'     # cli browser
 installBrewPackage 'pandoc'   # document format converter
 installBrewPackage 'docker'
+installBrewPackage 'diff-so-fancy'
 
 installBrewPackage 'media-info'
 installBrewPackage 'cmake'
