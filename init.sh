@@ -28,3 +28,7 @@ source "$dotfiles/env.go.sh"
 source "$dotfiles/env.gcloud.sh"
 
 source "$dotfiles/powerline.sh"
+
+# Temporary Fix for OSX Monterey test race detector bug.
+# https://github.com/golang/go/issues/49138
+export MallocNanoZone=0
