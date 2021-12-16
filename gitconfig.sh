@@ -51,3 +51,6 @@
 
 [includeIf "gitdir:~/grafana/"]
     path = ~/grafana/.gitconfig
+[fetch]
+	prune = true
+
