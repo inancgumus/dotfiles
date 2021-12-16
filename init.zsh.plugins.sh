@@ -10,6 +10,8 @@
 plugins=(
   brew
   git
+  keychain
+  gpg-agent
 
   cp
   extract
@@ -31,6 +33,9 @@ plugins=(
   kubectl
 )
 
+# for keychain and gpg-agent
+zstyle :omz:plugins:keychain agents ssh,gpg
+zstyle :omz:plugins:keychain identities id_rsa 459E5519E1A180A2
 
 #
 # highlights usual commands: echo, ls, touch, ...

@@ -20,4 +20,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Path to your oh-my-zsh installation.
 export ZSH="$home/.oh-my-zsh"
 
+# Enable GPG keys for Github
+export GPG_TTY=$(tty)
+
 source $ZSH/oh-my-zsh.sh

@@ -6,6 +6,7 @@ installBrewPackage 'findutils'
 installBrewPackage 'bash'
 
 installBrewPackage 'gnu-sed'
+installBrewPackage 'smimesign' # for using GNU keys on Github
 installBrewPackage 'git'
 installBrewPackage 'wget'
 installBrewPackage 'curl'
