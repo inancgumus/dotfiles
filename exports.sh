@@ -17,3 +17,5 @@ export MAGICK_HOME="$home/ImageMagick-6.8.8"
 export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
 
 export KAFKA_HOME=/opt/kafka
+
+export GOTRACEBACK=all
