@@ -11,7 +11,8 @@ export HISTSIZE=1000
 
 export GNUTERM='x11'
 
-export BREW_HOME='/usr/local/Cellar'
+HOMEBREW_PREFIX=$(brew config | grep HOMEBREW_PREFIX | awk -F': ' '{print $2}')
+export BREW_HOME=$HOMEBREW_PREFIX/Cellar
 
 export MAGICK_HOME="$home/ImageMagick-6.8.8"
 export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"

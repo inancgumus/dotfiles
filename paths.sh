@@ -26,8 +26,7 @@ PATH=$PATH:$HOME/Library/Python/3.7/bin
 
 PATH=$PATH:$HOME/.cargo/bin
 
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
 
 # finally...
 export PATH="$PATH"

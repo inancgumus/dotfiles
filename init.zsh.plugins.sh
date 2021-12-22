@@ -40,4 +40,4 @@ zstyle :omz:plugins:keychain identities id_rsa 459E5519E1A180A2
 #
 # highlights usual commands: echo, ls, touch, ...
 #
-source /opt/homebrew/Cellar/zsh-syntax-highlighting/0.7.1/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/Cellar/zsh-syntax-highlighting/0.7.1/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -5,9 +5,6 @@
 #
 source "$dotfiles/fortune.sh"
 
-source "$dotfiles/init.zsh.sh"
-source "$dotfiles/init.zsh.keys.sh"
-
 source "$dotfiles/exports.sh"
 source "$dotfiles/paths.sh"
 source "$dotfiles/aliases.sh"
@@ -32,3 +29,6 @@ source "$dotfiles/powerline.sh"
 # Temporary Fix for OSX Monterey test race detector bug.
 # https://github.com/golang/go/issues/49138
 export MallocNanoZone=0
+
+source "$dotfiles/init.zsh.sh"
+source "$dotfiles/init.zsh.keys.sh"
