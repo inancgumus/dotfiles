@@ -17,6 +17,7 @@ TODO
 - [ ] ln -sf com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
 - [ ] ln -sf gpg-agent.conf ~/.gnupg/gpg-agent.conf
 - [ ] import keys: gpg --keyring $DEV/secrets/pubring.kbx --export | gpg --import
+- [ ] gpg: homebrew path is static. set it dynamically with $HOMEBREW_PREFIX
 - [ ] Configure gpgconf
       brew install gpg2 gnupg pinentry-mac
       mkdir ~/.gnupg
