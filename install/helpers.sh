@@ -120,7 +120,7 @@ installBrewTap () {
   fi
 
   info "installing brew tap: ${1}\c"
-  runCmd brew tap -d $1
+  runCmd brew install --cask -d $1
 }
 
 installBrewCaskPackage () {
@@ -130,7 +130,7 @@ installBrewCaskPackage () {
   fi
 
   info "installing cask pkg: ${1}\c"
-  runCmd brew install --cask -vd install $1
+  runCmd brew install --cask -vd $1
 }
 installApp () {
   installBrewCaskPackage $1

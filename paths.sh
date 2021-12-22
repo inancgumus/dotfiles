@@ -7,15 +7,6 @@ eval `/usr/libexec/path_helper -s`
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
-#
-# DISABLED: it was too slow.
-#
-# gnu tools
-# NOTE: this should be the first in path!
-# if type brew >/dev/null 2>&1; then
-#   PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-# fi
-
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/local/bin
 PATH=$PATH:/bin:/usr/bin:/usr/sbin:/sbin
@@ -34,6 +25,9 @@ PATH=$PATH:$HOME/go/bin
 PATH=$PATH:$HOME/Library/Python/3.7/bin
 
 PATH=$PATH:$HOME/.cargo/bin
+
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # finally...
 export PATH="$PATH"

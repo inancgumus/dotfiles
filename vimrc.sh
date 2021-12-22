@@ -35,6 +35,9 @@ Plugin 'flazz/vim-colorschemes.git'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher.git'
 
+" go stuff
+Plugin 'fatih/vim-go'
+
 " remove esc key and bind esc to 'jk' sequence
 :inoremap jk <esc>
 
