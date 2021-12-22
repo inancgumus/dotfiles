@@ -14,6 +14,7 @@ TODO
 - [ ] Fix vim plugins
 - [ ] This does not exist: $HOME/.vim/bundle/Vundle.vim
 - [ ] Install https://github.com/powerline/fonts
+- [ ] ln -sf com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
 - [ ] Configure gpgconf
       brew install gpg2 gnupg pinentry-mac
       mkdir ~/.gnupg
