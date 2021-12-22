@@ -2,6 +2,9 @@ TODO
 
 - [x] Fix homebrew path
 - [ ] Install Go
+- [ ] Install Code
+- [ ] Install Chrome
+- [ ] Install Chromium
 - [ ] Fix powerline-go
 - [ ] Fix powerlevel10k
 - [ ] Fix zsh
@@ -9,6 +12,7 @@ TODO
 - [ ] Fix iTerm2 cmd+left/right keys
 - [ ] Fix ffmpeg
 - [ ] Fix vim plugins
+- [ ] This does not exist: $HOME/.vim/bundle/Vundle.vim
 - [ ] Install https://github.com/powerline/fonts
 - [ ] Configure gpgconf
       brew install gpg2 gnupg pinentry-mac
