@@ -19,25 +19,6 @@ set linespace=2
 
 " ---------------------------------------------------------------------------
 
-set rtp+=$HOME/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-" Let Vundle manage Vundle
-Plugin 'gmarik/vundle'
-
-" My Bundles
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-fugitive'
-Plugin 'flazz/vim-colorschemes.git'
-
-" needed by vim-colorscheme-switcher
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-colorscheme-switcher.git'
-
-" go stuff
-Plugin 'fatih/vim-go'
-
 " remove esc key and bind esc to 'jk' sequence
 :inoremap jk <esc>
 
