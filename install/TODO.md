@@ -15,6 +15,8 @@ TODO
 - [ ] This does not exist: $HOME/.vim/bundle/Vundle.vim
 - [ ] Install https://github.com/powerline/fonts
 - [ ] ln -sf com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+- [ ] ln -sf gpg-agent.conf ~/.gnupg/gpg-agent.conf
+- [ ] import keys: gpg --keyring $DEV/secrets/pubring.kbx --export | gpg --import
 - [ ] Configure gpgconf
       brew install gpg2 gnupg pinentry-mac
       mkdir ~/.gnupg
