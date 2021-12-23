@@ -29,6 +29,8 @@ takeover '~/Library/Logs'
 info "cleaning it up\c"
 runCmd brew cleanup
 
+info "hashing last login from terminal"
+runCmd touch $HOME/.hushlogin
 
 logLine "configuring: mac os x defaults"
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
