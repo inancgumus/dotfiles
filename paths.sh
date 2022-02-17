@@ -26,6 +26,8 @@ PATH=$PATH:$HOME/Library/Python/3.7/bin
 
 PATH=$PATH:$HOME/.cargo/bin
 
+PATH=$PATH:$HOME/.local/bin
+
 PATH=$PATH:/opt/homebrew/bin:/usr/local/homebrew/bin:/usr/local/opt/homebrew/bin
 
 eval "$(brew shellenv)"
