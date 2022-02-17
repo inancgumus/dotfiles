@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# give a large file limit
+ulimit -S -n 32768
+
 source "$dotfiles/exports.sh"
 source "$dotfiles/paths.sh"
 source "$dotfiles/colors.sh"
