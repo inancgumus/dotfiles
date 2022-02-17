@@ -7,3 +7,5 @@ alias m="make"
 
 # use bat as the man page colorizer
 export MANPAGER="sh -c 'col -bx | bat --theme Dracula -l man -p'"
+
+alias cri=chrome-remote-interface
