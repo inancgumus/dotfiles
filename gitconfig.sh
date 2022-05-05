@@ -1,5 +1,5 @@
 [user]
-	name = Inanc Gumus
+	name = İnanç Gümüş
 	email = m@inanc.io
 
 [credential]
@@ -32,9 +32,10 @@
   autosetuprebase = always
 
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process
 
 [alias]
 [diff]
@@ -53,4 +54,7 @@
     path = ~/grafana/.gitconfig
 [fetch]
 	prune = true
+
+[init]
+	defaultBranch = main
 
