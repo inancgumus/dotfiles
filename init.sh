@@ -32,3 +32,6 @@ source "$dotfiles/powerline.sh"
 source "$dotfiles/aliases.sh"
 
 source "$dotfiles/fortune.sh"
+
+autoload -U compinit
+compinit -i
