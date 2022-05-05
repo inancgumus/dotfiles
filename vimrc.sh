@@ -50,6 +50,13 @@ nnoremap <Leader>rts :%s/ /  /g<CR>
 
 filetype plugin indent on
 
+" git subject line=51 chars
+" git message lines each=72 chars
+autocmd FileType gitcommit set textwidth=72
+autocmd FileType gitcommit set colorcolumn+=51
+set textwidth=80
+set colorcolumn=+1
+
 set cursorline
 set expandtab
 set modelines=0
