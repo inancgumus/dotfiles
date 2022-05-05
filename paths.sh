@@ -16,7 +16,7 @@ PATH=$PATH:"$HOME/.rbenv/bin"
 PATH=$PATH:node_modules/.bin
 
 PATH=$PATH:./bin
-PATH=$PATH:$HOME/bin
+PATH=$PATH:$HOME/.bin
 PATH=$PATH:$HOME/dev/bin
 
 PATH=$PATH:$MAGICK_HOME/bin
