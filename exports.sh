@@ -17,3 +17,5 @@ export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
 export KAFKA_HOME=/opt/kafka
 
 export GOTRACEBACK=all
+export GOOS=darwin
+export GOARCH=arm64
