@@ -1,0 +1,143 @@
+#add_newline = false
+
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$golang\
+$rust\
+$crystal\
+$terraform\
+$nix_shell\
+$memory_usage\
+$aws\
+$gcloud\
+$env_var\
+$cmd_duration\
+$custom\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$character"""
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "ﳒ "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
+[directory]
+read_only = " "
+style = "bold #50fa7b"
+
+[git_branch]
+symbol = " "
+style = "bold #ff79c6"
+
+[git_status]
+style = "bold #ff5555"
+modified = "M"
+untracked = "U"
+deleted = "🗑 "
+renamed = "R"
+conflicted = "🏳 "
+ahead = "⇡"  # unpushed commit
+behind = "😰"
+diverged = "😵"
+staged = '[++\($count\)](green)'
+
+[character]
+error_symbol = "[λ](bold #ff5555)"
+success_symbol = "[λ](bold #f8f8f2)"
+
+[cmd_duration]
+style = "bold #f1fa8c"
+
+[hostname]
+style = "bold #ff5555"
+
+[username]
+format = "[$user]($style) on "
+style_user = "bold #bd93f9"
+
+[battery]
+disabled = false
+# full_symbol = "🔋"
+charging_symbol = "⚡"
+discharging_symbol = "🔋 "
+[[battery.display]]
+threshold = 100
+style = "bold green"

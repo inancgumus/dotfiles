@@ -14,6 +14,7 @@ logLine "installing: powerline 10k"
 installBrewCaskPackage 'font-hack-nerd-font'
 installBrewPackage 'romkatv/powerlevel10k/powerlevel10k'
 installBrewPackage 'powerline-go'
+installBrewPackage 'starship'
 
 info "cloning: zsh zsh-autosuggestions plugin\c"
 runCmd git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions

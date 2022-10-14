@@ -51,3 +51,6 @@ echo "source \"${dotfiles}/zsh.sh\"" > "$home/.zshrc"
 reCreateFile "$home/Library/Preferences/com.googlecode.iterm2.plist"
 info "linking iterm2 configuration"
 link "$dotfiles/com.googlecode.iterm2.plist" "$home/Library/Preferences/com.googlecode.iterm2.plist"
+
+# link starship config
+link "$dotfiles/starship.toml" "$home/.config/starship.toml"
