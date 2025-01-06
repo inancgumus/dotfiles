@@ -1,23 +1,38 @@
 # fast tests
-alias kbt='SKIP_FLAKY=true go test ./common ./chromium -failfast'
+alias kbt='go test ./common ./chromium -failfast'
 
 # slower tests
-alias kbtf='SKIP_FLAKY=true go test ./tests -failfast -short'
-alias kbtfd='XK6_BROWSER_LOG=debug kbtf -v'
-alias kbtft='XK6_BROWSER_LOG=trace kbtf -v'
+alias kbtf='go test ./tests -failfast -short'
+alias kbtfd='K6_BROWSER_LOG=debug kbtf -v'
+alias kbtft='K6_BROWSER_LOG=trace kbtf -v'
 
 # all tests
-alias kbta='SKIP_FLAKY=true go test ./common ./chromium ./tests -failfast -race'
-alias kbtad="XK6_BROWSER_LOG=debug kbta -v"
-alias kbtat="XK6_BROWSER_LOG=trace kbta -v"
+alias kbta='go test ./browser ./common ./chromium ./tests -failfast -race'
+alias kbtad="K6_BROWSER_LOG=debug kbta -v"
+alias kbtat="K6_BROWSER_LOG=trace kbta -v"
 
 # run scripts
-alias kbr="xk6 run -q"
-alias kbrd="XK6_BROWSER_LOG=debug kbr"
-alias kbrt="XK6_BROWSER_LOG=trace kbr"
+alias kbr="go run . run -q"
+alias kbrh="K6_BROWSER_HEADLESS=0 kbr"
+alias kbrd="K6_BROWSER_LOG=debug kbr"
+alias kbrt="K6_BROWSER_LOG=trace kbr"
 
-alias kblint='golangci-lint run --out-format=tab --new-from-rev "$(git log main --pretty=format:'%h' -n 1)" ./...'
+alias kblint='golangci-lint run --out-format=tab --new-from-rev "$(git log master --pretty=format:'%h' -n 1)" ./...'
 
 # docs
 alias kbdocsclean="rm -rf .node_modules && npm cache clean -f && npm i"
 alias kbdocsrun="npm run"
+
+# e2e tests
+function kbjs() {
+  GOPRIVATE="go.k6.io/k6" xk6 build latest \
+    --output /tmp/k6browser \
+    --with github.com/grafana/xk6-browser=.
+  set -x
+  for f in $(fd . 'examples/' --extension js -E 'hosts.js'); do
+    echo "Running $f"
+    /tmp/k6browser run -q "$f"
+  done
+  rm -f example-chromium.png
+  rm -f screenshot.png
+}

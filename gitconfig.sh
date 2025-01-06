@@ -1,6 +1,7 @@
 [user]
 	name = İnanç Gümüş
 	email = m@inanc.io
+	signingkey = 8C37266A4C4EA29D0C56A690459E5519E1A180A2
 
 [credential]
 	helper = osxkeychain
@@ -10,7 +11,15 @@
   autocrlf = input
   safecrlf = false
   whitespace = cr-at-eol
-  pager = "diff-so-fancy | less --tabs=2 -RFX"
+  pager = diff-so-fancy | less --tabs=4 -RFX
+
+[pager]
+  log = diff-so-fancy | less --tabs=4 -RFX
+  show = diff-so-fancy | less --tabs=4 -RFX
+  diff = diff-so-fancy | less --tabs=4 -RFX
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
 
 [color]
   ui = true
@@ -18,6 +27,7 @@
 
 [push]
 	default = current
+	autoSetupRemote = true
 
 [rebase]
   autosquash = true
@@ -38,6 +48,7 @@
 	process = git-lfs filter-process
 
 [alias]
+	set-upstream = !git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)
 [diff]
 	tool = ksdiff
 [clean]
@@ -49,6 +60,7 @@
 	newHighlight = green bold 22
 [http]
 	cookiefile = /Users/inanc/.gitcookies
+	postBuffer = 524288000
 
 [includeIf "gitdir:~/grafana/"]
     path = ~/grafana/.gitconfig
@@ -58,3 +70,13 @@
 [init]
 	defaultBranch = main
 
+# Enforce SSH
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+
+# use this if it doesn't work
+# go env -w GOPRIVATE=github.com/grafana
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true

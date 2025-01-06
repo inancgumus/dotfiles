@@ -1,3 +1,4 @@
+syntax on
 set nocompatible
 filetype off
 
@@ -63,7 +64,6 @@ set modelines=0
 set shiftwidth=2
 set clipboard=unnamed
 set synmaxcol=128
-set ttyscroll=10
 set encoding=utf-8
 set tabstop=2
 set nowrap
@@ -121,3 +121,13 @@ map <C-l> :tabn<cr>
 map <C-h> :tabp<cr>
 
 set wrap
+
+" PLUG INS
+
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+nnoremap <C-p> :<C-u>FZF<CR>

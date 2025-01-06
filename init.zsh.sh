@@ -24,4 +24,12 @@ export ZSH="$home/.oh-my-zsh"
 export GPG_TTY=$(tty)
 
 source $ZSH/oh-my-zsh.sh
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+
+# disable printing % at the end of the line.
+# for example, in curl, zsh adds % at the end of the line
+# if the line doesn't end with a newline.
+unsetopt PROMPT_SP
+setopt PROMPT_CR
+setopt PROMPT_SP
+export PROMPT_EOL_MARK=""

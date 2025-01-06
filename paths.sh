@@ -22,6 +22,7 @@ PATH=$PATH:$HOME/dev/bin
 PATH=$PATH:$MAGICK_HOME/bin
 
 PATH=$PATH:$HOME/go/bin
+PATH=$PATH:$HOME/sdk/gotip/bin
 PATH=$PATH:$HOME/Library/Python/3.7/bin
 
 PATH=$PATH:$HOME/.cargo/bin
@@ -30,7 +31,12 @@ PATH=$PATH:$HOME/.local/bin
 
 PATH=$PATH:/opt/homebrew/bin:/usr/local/homebrew/bin:/usr/local/opt/homebrew/bin
 
+PATH=$PATH:/Users/inanc/Library/Python/3.11/bin
+
 eval "$(brew shellenv)"
+
+# vim stuff
+PATH=$PATH:/Users/inanc/.vim/pack/minpac/start/fzf/bin/fzf
 
 # finally...
 export PATH="$PATH"
