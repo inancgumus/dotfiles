@@ -9,3 +9,4 @@ alias m="make"
 export MANPAGER="sh -c 'col -bx | bat --theme Dracula -l man -p'"
 
 alias cri=chrome-remote-interface
+alias checkdomain="(read domain; whois \$domain | grep -qciE 'Domain not found.' && echo -e '\033[0;32mAvailable\033[0m' || echo -e '\033[0;31mNot available\033[0m') <<<"
