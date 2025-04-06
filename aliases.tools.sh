@@ -4,6 +4,7 @@ alias download="aria2c -c -j32 -s32 -x16 -o"
 alias find='fd -c=always'
 alias ls='eza -hF -h --git --color=always -s type'
 alias m="make"
+alias tree='tree --dirsfirst --noreport --gitignore'
 
 # use bat as the man page colorizer
 export MANPAGER="sh -c 'col -bx | bat --theme Dracula -l man -p'"
