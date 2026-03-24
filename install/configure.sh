@@ -34,4 +34,4 @@ runCmd touch $HOME/.hushlogin
 
 logLine "configuring: mac os x defaults"
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-source "osxdefaults.sh"
+source "$DOTKIT_INSTALL_DIR/osxdefaults.sh"
