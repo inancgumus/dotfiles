@@ -54,3 +54,11 @@ link "$dotfiles/com.googlecode.iterm2.plist" "$home/Library/Preferences/com.goog
 
 # link starship config
 link "$dotfiles/starship.toml" "$home/.config/starship.toml"
+
+# link claude code config (memory, projects, skills)
+reCreateDirectory "$home/.claude/memory"
+link "$dev/.claude/memory" "$home/.claude/memory"
+reCreateDirectory "$home/.claude/projects"
+link "$dev/.claude/projects" "$home/.claude/projects"
+reCreateDirectory "$home/.claude/skills"
+link "$dev/.claude/skills" "$home/.claude/skills"
