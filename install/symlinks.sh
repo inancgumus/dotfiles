@@ -29,7 +29,7 @@ logLine "installing links: nvm..."
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 reCreateDirectory "$home/.nvm"
 
-info "copying nvm-exec to ~/.nvm"
+info "copying nvm-exec to ~/.nvm\c"
 [[ -f "$(brew --prefix nvm 2>/dev/null)/nvm-exec" ]] && runCmd cp "$(brew --prefix nvm)/nvm-exec" "$home/.nvm/"
 
 
@@ -56,14 +56,17 @@ link "$dotfiles/starship.toml" "$home/.config/starship.toml"
 # link claude code config (memory, projects, skills)
 # only links if $dev/.claude/ dirs exist (not present on a fresh machine)
 if [[ -d "$dev/.claude/memory" ]]; then
+  mkdir -p "$home/.claude"
   reCreateDirectory "$home/.claude/memory"
   link "$dev/.claude/memory" "$home/.claude/memory"
 fi
 if [[ -d "$dev/.claude/projects" ]]; then
+  mkdir -p "$home/.claude"
   reCreateDirectory "$home/.claude/projects"
   link "$dev/.claude/projects" "$home/.claude/projects"
 fi
 if [[ -d "$dev/.claude/skills" ]]; then
+  mkdir -p "$home/.claude"
   reCreateDirectory "$home/.claude/skills"
   link "$dev/.claude/skills" "$home/.claude/skills"
 fi
