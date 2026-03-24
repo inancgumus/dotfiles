@@ -13,10 +13,10 @@ home=$(eval echo ~${SUDO_USER})
 dev="$home/Desktop/dev"
 dotfiles="$dev/dotfiles"
 
-cd "$dotfiles/install"
+export DOTKIT_DIR="$dev/dotkit"
+export DOTFILES_DIR="$dotfiles"
 
-source "../colors.sh"
-source "helpers.sh"
+source "$DOTKIT_DIR/install/bootstrap.sh"
 
 #
 # WARNING:
@@ -30,12 +30,3 @@ if [ ! -f $secrets ]; then
 	exit 1
 fi
 source "$secrets"
-
-
-# Remove the installation log file
-rm -f install.log
-
-# Ask for the administrator password upfront.
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-sudo -v
-while true; do sudo -n true; sleep 120; kill -0 "$$" || exit; done 2>/dev/null &

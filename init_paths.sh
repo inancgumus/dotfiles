@@ -10,3 +10,7 @@ dotfiles="$dev/dotfiles"
 HOME=$home
 DEV=$dev
 DOTFILES=$dotfiles
+
+export DOTKIT_DIR="$dev/dotkit"
+export DOTFILES_DIR="$dotfiles"
+export DOTKIT_CC_ROOT="$home/grafana"

@@ -5,7 +5,9 @@ ulimit -S -n 32768
 
 source "$dotfiles/exports.sh"
 source "$dotfiles/paths.sh"
-source "$dotfiles/colors.sh"
+source "$DOTKIT_DIR/dotkit.sh"
+source "$DOTKIT_DIR/colors.grep.sh"
+source "$DOTKIT_DIR/colors.man.sh"
 source "$dotfiles/functions.sh"
 # source "$dotfiles/completions.sh"
 # source "$dotfiles/bash_prompt.sh"
