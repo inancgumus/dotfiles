@@ -8,9 +8,11 @@ alias glp="git log $GIT_LOG_OPTS --patch"
 alias gls="git log $GIT_LOG_OPTS --stat"
 alias glx="git log $GIT_LOG_OPTS --pretty=full"
 
+alias gsh="git show --ext-diff"
+
 alias gs='git status -s'
 alias gsx='git status'
-alias gd='git diff --color'
+alias gd='git diff --color --diff-filter=d --ignore-all-space' # hide deleted files
 alias gdn='git diff --color --name-only'
 alias gdc='git diff --color --cached'
 alias gci='git commit -a --verbose'

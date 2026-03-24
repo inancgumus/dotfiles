@@ -1,5 +1,3 @@
-alias clear="clear && printf '\e[3J'"
-
 alias ..='cd ../'
 
 source "$dotfiles/aliases.docker.sh"
