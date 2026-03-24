@@ -1,12 +1,11 @@
 logHead "INSTALLING APPS"
 
 installApp 'cyberduck'
-installApp 'kindle'
+installApp 'amazon-kindle'
 installApp 'iterm2'
 installApp 'rar'
 installApp 'sublime-text'
 installApp 'spotify'
-installApp 'skype'
 installApp 'slack'
 installApp 'virtualbox'
 installApp 'vlc'

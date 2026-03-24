@@ -24,16 +24,13 @@ link "$dotfiles/gitconfig.sh" "$home/.gitconfig"
 reCreateFile "$home/.npmrc"
 link "$dotfiles/npmrc.sh" "$home/.npmrc"
 
-link "/usr/X11/lib/libpng15.dylib" "/usr/local/lib/libpng16.16.dylib"
-# link "/usr/local/opt/redis/*.plist" "~/Library/LaunchAgents"
-
 
 logLine "installing links: nvm..."
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 reCreateDirectory "$home/.nvm"
 
 info "copying nvm-exec to ~/.nvm"
-runCmd cp $(brew --prefix nvm)/nvm-exec "$home/.nvm/"
+[[ -f "$(brew --prefix nvm 2>/dev/null)/nvm-exec" ]] && runCmd cp "$(brew --prefix nvm)/nvm-exec" "$home/.nvm/"
 
 
 # doing this last because older commands can override it
@@ -53,12 +50,20 @@ info "linking iterm2 configuration"
 link "$dotfiles/com.googlecode.iterm2.plist" "$home/Library/Preferences/com.googlecode.iterm2.plist"
 
 # link starship config
+mkdir -p "$home/.config"
 link "$dotfiles/starship.toml" "$home/.config/starship.toml"
 
 # link claude code config (memory, projects, skills)
-reCreateDirectory "$home/.claude/memory"
-link "$dev/.claude/memory" "$home/.claude/memory"
-reCreateDirectory "$home/.claude/projects"
-link "$dev/.claude/projects" "$home/.claude/projects"
-reCreateDirectory "$home/.claude/skills"
-link "$dev/.claude/skills" "$home/.claude/skills"
+# only links if $dev/.claude/ dirs exist (not present on a fresh machine)
+if [[ -d "$dev/.claude/memory" ]]; then
+  reCreateDirectory "$home/.claude/memory"
+  link "$dev/.claude/memory" "$home/.claude/memory"
+fi
+if [[ -d "$dev/.claude/projects" ]]; then
+  reCreateDirectory "$home/.claude/projects"
+  link "$dev/.claude/projects" "$home/.claude/projects"
+fi
+if [[ -d "$dev/.claude/skills" ]]; then
+  reCreateDirectory "$home/.claude/skills"
+  link "$dev/.claude/skills" "$home/.claude/skills"
+fi
