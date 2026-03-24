@@ -16,6 +16,8 @@
 source "$HOME/Desktop/dev/dotfiles/init_paths.sh"
 source "$dotfiles/init.sh"
 
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
 function powerline_precmd() {
     PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0})"
 
@@ -56,3 +58,10 @@ fi
 # exec 2>&3 3>&-
 #
 # ------------------------------------------------------------------------------
+
+# bun completions
+[ -s "/Users/inanc/.bun/_bun" ] && source "/Users/inanc/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
