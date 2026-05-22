@@ -714,10 +714,6 @@ runCmd defaults write com.apple.messageshelper.MessageController SOInputLineSett
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
 
-info "Allow installing user scripts via GitHub Gist or Userscripts.org\c"
-runCmdNONL defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
-runCmd defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
-
 info "Enable the backswipe on trackpads\c"
 runCmdNONL defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool true
 runCmd defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool true
